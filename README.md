@@ -14,10 +14,12 @@ What is the Levenshtein Distance betweeen Spanish, French, and Catalan, consider
 In order to compare these three languages, a small corpus was created using a fraction of *Harry Potter: The Philosopher's stone*.  
 A parallel corpus was manually created considering coincident sentence boundaries when possible. Due to translation, this is not always possible. The main criteria when setting boundaries was to keep sentences short enough to make the comparison reliable, and long enough to convey a full idea.
 Examples of the alignment:  
-(1)  
-S: El señor Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros.  
-F: Mr Dursley dirigeait la Grunnings, une entreprise qui fabriquait des perceuses.  
-C: El senyor Dursley era director d’una fàbrica anomenada Grunnings, que feia broques.  
+| Spanish | French | Catalan |
+| --- | --- | --- |
+| El señor Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros. | Mr Dursley dirigeait la Grunnings, une entreprise qui fabriquait des perceuses. | El senyor Dursley era director d’una fàbrica anomenada Grunnings, que feia broques. | 
+
+F: 
+C: 
 (2)  
 S: Nuestra historia comienza cuando el señor y la señora Dursley se despertaron un martes, con un cielo cubierto de nubes grises que amenazaban tormenta. Pero nada había en aquel nublado cielo que sugiriera los acontecimientos extraños y misteriosos que poco después tendrían lugar en toda la región.  
 F: Lorsque Mr et Mrs Dursley s'éveillèrent, au matin du mardi où commence cette histoire, il faisait gris et triste et rien dans le ciel nuageux ne laissait prévoir que des choses étranges et mystérieuses allaient bientôt se produire dans tout le pays.  
