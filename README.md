@@ -42,11 +42,17 @@ The following table shows the Levenshtein Distance applied to both ortographic a
 | Spanish & Catalan | 'la se__ora dursley era ____a ____a _ _i _a __ __ tenia __ c_ll el doble de l_arg de_ ___ __ habitual l_ qu__ ____ l_ resulta_a m__t _______a a __ora de p_s__r__ _l _ia e___a__ els ___ns p_r s____ __ __s ______s' | 135 |
 | Catalan & French | '__ _____r_ dursley __a ____a _____ _ _i __ __ __ _e___ _l ____ e_ do___ d_ _____ de_ ___ _s ________ la ____ c___ _i _____ta__ _o_t ____ti__ _ __o__ _e p____rse __ _i_ e___ant ___ ____s _e_ _o_re de __s _a____s' | 153 |
 
-| Language | Sentence | LD Score |
+| Language | Sentence |
+| --- | --- |
+| Spanish | El señor Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros. |
+| French | Mr Dursley dirigeait la Grunnings, une entreprise qui fabriquait des perceuses. |
+| Catalan | |
+
+| Comparison | Levenshtein Distance | Score |
 | --- | --- | --- |
-| Spanish | El señor Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros. | |
-| French | El senyor Dursley era director d’una fàbrica anomenada Grunnings, que feia broques. | |
-| Comparison | _r_ dursley \__a__ _ el__ \___i_ \__n__ __ _lo___ e_ d___o____ d__ \___ de__ _o__ \__u_ lo__ que la m_y____ __ qu_ \___ \__a__ \__rt _ti_e po__ es_i_n___ ___ __i____ __ ___a_d___ _ard____s ___ _____r__ __s ____ins | 163 |
+| Spanish & French | _r dursley __r__e_it __ ________s_ ___ ___r___is_ qu_ fabri__a__ ___ __r___s__. | 62 |
+| French & Catalan | __ _____r dursley \___ _i_e_t__ __un_ _______ _n__e____ __u_______ qu_ _e__ _r__ues. | 60 |
+| Catalan & Spanish | el se__or dursley era director d_una ___r__a ___m__ada grunnings, que f_ia ______s. | 30 |
 
 ## Character distance
 
