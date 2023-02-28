@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import numpy as np
 import pandas as pd
 
@@ -150,5 +151,8 @@ class Levenshtein():
 
 if __name__ == '__main__':
     ld = Levenshtein(verbose=1)
-    ld.compute_distance('había una vez', 'avia una vesces')
+    if sys.argv[1] and sys.argv[2]:
+        ld.compute_distance(sys.argv[1] and sys.argv[2])
+    else:
+        ld.compute_distance('había una vez', 'avia unas veces')
     

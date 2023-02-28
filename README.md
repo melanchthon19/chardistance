@@ -90,9 +90,11 @@ Last, but not least, I would recommend watching a French movie at *la Filmoteca 
 Clone the repository: `git clone git@github.com:melanchthon19/chardistance.git`  
 Change directory: `cd chardistance`  
 Install packages: `pip install -r requirements.txt`  
+
 `levenshtein.py`contains the Levenshtein class.  
 You can run `levenshtein.py` by itself passing two strings: `./levenshtein.py string1 string2`  
-`compare.py` uses Levenshtein class to compare strings from a given file.  
+
+The main file is `compare.py`. It uses Levenshtein class to compare strings from a given file.  
 It accepts the following flags:  
 `--file: file that stores sentences`  
 `--index: analyse sentence at given index only`  
@@ -103,13 +105,13 @@ Usage example:
 `./compare.py -f data/hp-phonemic.csv -p phonemic`  
 
 # Bibliography
-[OpenIPA: Free, informative IPA transcription for Lyric Diction](https://www.openipa.org/)  
-[TexAFon: Herramienta de transcripción fonética](https://tomcat.labfon.uned.es/texafon/)  
-[Catalan Phonemic Chart](http://www.ub.edu/sonscatala/en/phonemic-chart-central)  
-[Automatic Phonetic Transcription of dialectal variance in Catalan](https://repositori.upf.edu/bitstream/handle/10230/28108/Codina_2016.pdf?sequence=1&isAllowed=y)  
-[Phonological Distance Measures](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2856103/)  
-[Applying the Levenshtein Distance to Catalan dialects](http://www.let.rug.nl/~wieling/martijnwieling/files/Valls.pdf)  
-[Levenshtein Distance](https://people.cs.pitt.edu/~kirk/cs1501/Pruhs/Spring2006/assignments/editdistance/Levenshtein%20Distance.htm#:~:text=What%20is%20Levenshtein%20Distance%3F,to%20transform%20s%20into%20t.)
-Harry Potter y la piedra filosofal. Translated by Alicia Dellepiane. Emecé Editores España, S.A. (1999).  
-Harry Potter y la pedra filosofal. Translated by Laura Escorihuela Martínez. Editorial Empúries (1999).  
-Harry Potter à l'Ecole des Sorciers. Translated by Jean-François Ménard - Gallimard (2007)  
+  * [OpenIPA: Free, informative IPA transcription for Lyric Diction](https://www.openipa.org/)  
+  * [TexAFon: Herramienta de transcripción fonética](https://tomcat.labfon.uned.es/texafon/)  
+  * [Catalan Phonemic Chart](http://www.ub.edu/sonscatala/en/phonemic-chart-central)  
+  * [Automatic Phonetic Transcription of dialectal variance in Catalan](https://repositori.upf.edu/bitstream/handle/10230/28108/Codina_2016.pdf?sequence=1&isAllowed=y)  
+  * [Phonological Distance Measures](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2856103/)  
+  * [Applying the Levenshtein Distance to Catalan dialects](http://www.let.rug.nl/~wieling/martijnwieling/files/Valls.pdf)  
+  * [Levenshtein Distance](https://people.cs.pitt.edu/~kirk/cs1501/Pruhs/Spring2006/assignments/editdistance/Levenshtein%20Distance.htm#:~:text=What%20is%20Levenshtein%20Distance%3F,to%20transform%20s%20into%20t.)  
+  * Harry Potter y la piedra filosofal. Translated by Alicia Dellepiane. Emecé Editores España, S.A. (1999).  
+  * Harry Potter y la pedra filosofal. Translated by Laura Escorihuela Martínez. Editorial Empúries (1999).  
+  * Harry Potter à l'Ecole des Sorciers. Translated by Jean-François Ménard. Gallimard (2007)  
