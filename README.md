@@ -14,7 +14,7 @@ What is the Levenshtein Distance betweeen Spanish, French, and Catalan, consider
 # Data
 In order to compare these three languages, a small corpus was created using a fraction of *Harry Potter: The Philosopher's stone*.  
 
-A parallel corpus was manually created considering coincident sentence boundaries when possible. Due to translation, this is not always possible. The main criteria when setting boundaries was to keep sentences short enough to make the comparison reliable, and long enough to convey a full idea.
+A parallel corpus was manually created considering coincident sentence boundaries. Due to translation, this is not always possible. The main criteria when setting boundaries was to keep sentences short enough to make the comparison reliable, and long enough to convey a full idea.
 Examples of the alignment:  
 | Spanish | French | Catalan |
 | --- | --- | --- |
@@ -41,6 +41,12 @@ The following table shows the Levenshtein Distance applied to both ortographic a
 | Spanish & French | '_r_ dursley __a__ _ el__ ___i_ __n__ __ _lo___ e_ d___o____ d__ ___ de__ _o__ __u_ lo__ que la m_y____ __ qu_ ___ __a__ __rt _ti_e po__ es_i_n___ ___ __i____ __ ___a_d___ _ard____s ___ _____r__ __s ____ins' | 163 |
 | Spanish & Catalan | 'la se__ora dursley era ____a ____a _ _i _a __ __ tenia __ c_ll el doble de l_arg de_ ___ __ habitual l_ qu__ ____ l_ resulta_a m__t _______a a __ora de p_s__r__ _l _ia e___a__ els ___ns p_r s____ __ __s ______s' | 135 |
 | Catalan & French | '__ _____r_ dursley __a ____a _____ _ _i __ __ __ _e___ _l ____ e_ do___ d_ _____ de_ ___ _s ________ la ____ c___ _i _____ta__ _o_t ____ti__ _ __o__ _e p____rse __ _i_ e___ant ___ ____s _e_ _o_re de __s _a____s' | 153 |
+
+| Language | Sentence | LD Score |
+| --- | --- | --- |
+| Spanish | El señor Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros. | |
+| French | El senyor Dursley era director d’una fàbrica anomenada Grunnings, que feia broques. | |
+| Comparison | _r_ dursley \__a__ _ el__ \___i_ \__n__ __ _lo___ e_ d___o____ d__ \___ de__ _o__ \__u_ lo__ que la m_y____ __ qu_ \___ \__a__ \__rt _ti_e po__ es_i_n___ ___ __i____ __ ___a_d___ _ard____s ___ _____r__ __s ____ins | 163 |
 
 ## Character distance
 
