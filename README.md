@@ -21,12 +21,7 @@ Examples of the alignment:
 | El señor Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros. | Mr Dursley dirigeait la Grunnings, une entreprise qui fabriquait des perceuses. | El senyor Dursley era director d’una fàbrica anomenada Grunnings, que feia broques. | 
 | Nuestra historia comienza cuando el señor y la señora Dursley se despertaron un martes, con un cielo cubierto de nubes grises que amenazaban tormenta. Pero nada había en aquel nublado cielo que sugiriera los acontecimientos extraños y misteriosos que poco después tendrían lugar en toda la región. | Lorsque Mr et Mrs Dursley s'éveillèrent, au matin du mardi où commence cette histoire, il faisait gris et triste et rien dans le ciel nuageux ne laissait prévoir que des choses étranges et mystérieuses allaient bientôt se produire dans tout le pays. | Quan el senyor i la senyora Dursley es van aixecar el dimarts gris i trist en què comença la nostra història, no hi havia res al cel ennuvolat que pogués fer pensar que molt aviat succeirien coses estranyes i misterioses per tot el país. |
 
-The books used were translated by:
-  * Catalan: Laura Escorihuela Martínez - Editorial Empúries (1999)  
-  * French: Jean-François Ménard - Gallimard (2007)  
-  * Spanish: Alicia Dellepiane - Emecé Editores España, S.A. (1999)  
-
-The corpus comprises 47 sentences, which accounts for ... on average on each language. The shortest sentence is ... and the largest is ... On average each sentence is ...
+The corpus comprises 45 sentences. Each language has roughly 950 tokens and each sentence is 20 tokens long on average.
 
 # Levenshtein Distance
 Levenshtein Distance is a number that counts how (dis)similar two strings are. It does so by counting how many times you would need to *insert*, *replace*, or *delete* a character to get a match.  
@@ -36,17 +31,11 @@ For example, the distance between `hello` and `yellow` will be of 2:
 
 This metric considers the best way of going from one string to the other by doing the least possible changes.  
 The following table shows the Levenshtein Distance applied to both ortographic and phonemic transcription of the first example:  
-| Languages | Levenshtein Distance | Score |
-| --- | --- | --- |
-| Spanish & French | '_r_ dursley __a__ _ el__ ___i_ __n__ __ _lo___ e_ d___o____ d__ ___ de__ _o__ __u_ lo__ que la m_y____ __ qu_ ___ __a__ __rt _ti_e po__ es_i_n___ ___ __i____ __ ___a_d___ _ard____s ___ _____r__ __s ____ins' | 163 |
-| Spanish & Catalan | 'la se__ora dursley era ____a ____a _ _i _a __ __ tenia __ c_ll el doble de l_arg de_ ___ __ habitual l_ qu__ ____ l_ resulta_a m__t _______a a __ora de p_s__r__ _l _ia e___a__ els ___ns p_r s____ __ __s ______s' | 135 |
-| Catalan & French | '__ _____r_ dursley __a ____a _____ _ _i __ __ __ _e___ _l ____ e_ do___ d_ _____ de_ ___ _s ________ la ____ c___ _i _____ta__ _o_t ____ti__ _ __o__ _e p____rse __ _i_ e___ant ___ ____s _e_ _o_re de __s _a____s' | 153 |
-
 | Language | Sentence |
 | --- | --- |
 | Spanish | El señor Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros. |
 | French | Mr Dursley dirigeait la Grunnings, une entreprise qui fabriquait des perceuses. |
-| Catalan | |
+| Catalan | El senyor Dursley era director d’una fàbrica anomenada Grunnings, que feia broques. |
 
 | Comparison | Levenshtein Distance | Score |
 | --- | --- | --- |
@@ -54,12 +43,53 @@ The following table shows the Levenshtein Distance applied to both ortographic a
 | French & Catalan | `__ _____r dursley ___ _i_e_t__ __un_ _______ _n__e____ __u_______ qu_ _e__ _r__ues.` | 60 |
 | Catalan & Spanish | `el se__or dursley era director d_una ___r__a ___m__ada grunnings, que f_ia ______s.` | 30 |
 
-## Character distance
+## Ortographic transcription
+The books used to obtain ortographic transcriptions were translated by:  
+  * Catalan: Laura Escorihuela Martínez - Editorial Empúries (1999)  
+  * French: Jean-François Ménard - Gallimard (2007)  
+  * Spanish: Alicia Dellepiane - Emecé Editores España, S.A. (1999)  
 
-## Phonemic distance
+## Phonemic transcription
+Two resources were used to obtain standard phonemic transcriptions:  
+  * French: [OpenIPA](https://www.openipa.org/)  
+  * Spanish and Catalan: [TexAFon](https://tomcat.labfon.uned.es/texafon/)  
+
+Example of the transcription:
+| Spanish | French | Catalan |
+| --- | --- | --- |
+| Era un hombre corpulento y rollizo, casi sin cuello, aunque con un bigote inmenso. | C'était un homme grand et massif, qui n'avait pratiquement pas de cou, mais possédait en revanche une moustache de belle taille.	| Era un home gros i fort que gairebé no tenia coll, però que lluïa un bigoti enorme. |
+| eɾa un ombɾe koɾpulento i roʝiθo, kasi sin kweʝo, awnke kon un Biɣote inmenso	| setɛt‿ œ̃ ɔmə gɾɑ̃d‿e masif, ki nave pɾatikəmə pa də ku, me pɔsedɛt‿ɑ̃ ɾəvɑ̃ʃ ynə mustaʃə də bɛlə tajə.	| eɾə un ɔmə gɾɔz i fɔɾt kə kəjɾəβe no təniə kɔʎ, pəɾɔ kə ʎuiə un pigɔti ənoɾmə |
 
 # Preprocessing
+Before measuring Levenshtein Distance, preprocessing and formatting was applied. Specifically, before ortographic comparison, all vowel's variations were reduced to one (i.e. â --> a). Before phonemic comparison, `‿` was deleted as it was added by OpenIPA to denote liaison. However, the inserted phoneneme was kept. In both cases, any punctuation was removed.
 
+# Results
+The following table depicts the results. Each column represents the Levenshtein Distance between a pair of languages, and each row shows the ortographic and phonemic comparison.
 
+| Comparison | Spanish-French | Spanish-Catalan | French-Catalan |
+| --- | --- | --- | --- |
+| Ortographic | 95,04 | 68,98 | 92,67 |
+| Phonemic | 92,67 | 76,11 | 88,39 |
+
+# How to use this repository
+
+Clone the repository: `git clone git@github.com:melanchthon19/chardistance.git`  
+Change directory: `cd chardistance`  
+Install packages: `pip install -r requirements.txt` 
+`levenshtein.py`contains the Levenshtein class.   
+You can run levenshtein.py by itself passing two strings: `./levenshtein.py string1 string2` 
+`compare.py` uses Levenshtein class to compare string from a given file.
+It accepts the following flags:
+`--file: file that stores sentences`  
+`--index: analyse sentence at given index only` 
+`--preprocess: {ortographic,phonemic}`  
+`--verbose: print each minimum edit distance` 
+Usage example:  
+`./compare.py -f data/hp.csv -p ortographic -v -i 2` 
+`./compare.py -f data/hp-phonemic.csv -p phonemic` 
+
+# Future work
+  * Use a bigger parallel corpora.
+  * 
 
 # Bibliography
