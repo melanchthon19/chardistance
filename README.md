@@ -71,6 +71,20 @@ The following table depicts the results. Each column represents the Levenshtein 
 | Ortographic | 95,04 | 68,98 | 92,67 |
 | Phonemic | 92,67 | 76,11 | 88,39 |
 
+Considering the ortographic comparison, Spanish and Catalan are closer to each other than they are to French, which is equally away by roughly 25 characters. The difference between Spanish-Catalan and Spanish-French comparison is of 26 changes, and the difference between both distances is of 21.  
+According to the phonemic comparison, Spanish is still closer to Catalan than it is to French by 16 changes. However, Spanish and Catalan are not equally away from French as the ortographic comparison showed. The difference between the Spanish-Catalan and Spanish-French comparison is of 15 changes, and the difference between both distances is of 8 characters.
+These results suggests that for a Spanish speaker, Catalan is closer both ortographically as well as phonemically. Nonetheless, given that ortographic and phonemic distances are not of the same scale, the overall reduction of phonemic distances indicates that languages are evenly away from each other with regards to speech: ortographically the distance is of 26, whereas phonemically the distance is of 8.
+
+# Conclusions
+Reading Catalan for a Spanish speaker will be easier to understand than listening, and understanding Catalan overall will be easier than French.  
+With regards to Catalan, even though it is phisically closer to French, their phonemic distance is almost as that of Spanish and French.  
+Last, but not least, I would recommend watching a French movie at *la Filmoteca de Catalunya* subtitled in Catalan.
+
+# Future work
+  * Use a bigger parallel corpora.  
+  * Compare MFCCs on the actual movie (speech, sounds, and music included, as everything affects comprehension).  
+  *  Compare ortographic and phonemic overlapping between languages.
+
 # How to use this repository
 
 Clone the repository: `git clone git@github.com:melanchthon19/chardistance.git`  
@@ -83,13 +97,9 @@ It accepts the following flags:
 `--file: file that stores sentences`  
 `--index: analyse sentence at given index only` 
 `--preprocess: {ortographic,phonemic}`  
-`--verbose: print each minimum edit distance` 
+`--verbose: print each minimum edit distance`  
 Usage example:  
 `./compare.py -f data/hp.csv -p ortographic -v -i 2` 
 `./compare.py -f data/hp-phonemic.csv -p phonemic` 
-
-# Future work
-  * Use a bigger parallel corpora.
-  * 
 
 # Bibliography
