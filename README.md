@@ -50,9 +50,9 @@ The following table shows the Levenshtein Distance applied to both ortographic a
 
 | Comparison | Levenshtein Distance | Score |
 | --- | --- | --- |
-| Spanish & French | _r dursley __r__e_it __ ________s_ ___ ___r___is_ qu_ fabri__a__ ___ __r___s__. | 62 |
-| French & Catalan | __ _____r dursley \___ _i_e_t__ __un_ _______ _n__e____ __u_______ qu_ _e__ _r__ues. | 60 |
-| Catalan & Spanish | el se__or dursley era director d_una ___r__a ___m__ada grunnings, que f_ia ______s. | 30 |
+| Spanish & French | `_r dursley __r__e_it __ ________s_ ___ ___r___is_ qu_ fabri__a__ ___ __r___s__.` | 62 |
+| French & Catalan | `__ _____r dursley ___ _i_e_t__ __un_ _______ _n__e____ __u_______ qu_ _e__ _r__ues.` | 60 |
+| Catalan & Spanish | `el se__or dursley era director d_una ___r__a ___m__ada grunnings, que f_ia ______s.` | 30 |
 
 ## Character distance
 
