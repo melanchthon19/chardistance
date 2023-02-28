@@ -97,9 +97,9 @@ You can run `levenshtein.py` by itself passing two strings: `./levenshtein.py st
 The main file is `compare.py`. It uses Levenshtein class to compare strings from a given file.  
 It accepts the following flags:  
 `--file: file that stores sentences`  
-`--index: analyse sentence at given index only`  
-`--preprocess: {ortographic,phonemic}`  
-`--verbose: print each minimum edit distance`  
+`--index: analyse sentence at given index only` [optional]  
+`--preprocess: {ortographic,phonemic}` [optional]  
+`--verbose: print each minimum edit distance` [optional]  
 Usage example:  
 `./compare.py -f data/hp.csv -p ortographic -v -i 2`  
 `./compare.py -f data/hp-phonemic.csv -p phonemic`  
@@ -113,5 +113,5 @@ Usage example:
   * [Applying the Levenshtein Distance to Catalan dialects](http://www.let.rug.nl/~wieling/martijnwieling/files/Valls.pdf)  
   * [Levenshtein Distance](https://people.cs.pitt.edu/~kirk/cs1501/Pruhs/Spring2006/assignments/editdistance/Levenshtein%20Distance.htm#:~:text=What%20is%20Levenshtein%20Distance%3F,to%20transform%20s%20into%20t.)  
   * Harry Potter y la piedra filosofal. Translated by Alicia Dellepiane. Emecé Editores España, S.A. (1999).  
-  * Harry Potter y la pedra filosofal. Translated by Laura Escorihuela Martínez. Editorial Empúries (1999).  
+  * Harry Potter i la pedra filosofal. Translated by Laura Escorihuela Martínez. Editorial Empúries (1999).  
   * Harry Potter à l'Ecole des Sorciers. Translated by Jean-François Ménard. Gallimard (2007)  
