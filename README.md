@@ -1,14 +1,15 @@
 # chardistance
-*Would you rather watch a Catalan movie at the la Cinémathèque française subtitled in French or a French movie at La Filmoteca de Catalunya subtitled in Catalan?*  
+*Would you rather watch a Catalan movie at *la Cinémathèque française* subtitled in French or a French movie at *la Filmoteca de Catalunya* subtitled in Catalan?*  
 
 # Motivation
 As a spanish speaker, being in Barcelona is not an issue... unless you dare to go to La Filmoteca de Catalunya and watch a French movie subtitled in Catalan.  
-Given that I don't know any of both languages beyond a small set of words (not even half A1), I wondered how should I watch the movie if I wanted to grasp the meaning of dialogs.  
+Given that I don't know any of both languages beyond a small set of words (not even half A1), I wondered how should I watch the movie if I wanted to understand the dialogues.  
 Should I focus on the speech sounds or the subtitles? Does it make any difference?  
 My intuition says that Catalan should be easier to understand -at least that's what I think when I read it-. However, it resembles French when I hear it.  
+In order to find out the difference and measure it somehow, I decided two measure two different but related language aspects using the same metric: Levinshtein Distance on the ortographic transcription of the dialogues (i.e. subtitles) and on the phonemic transcription of the dialogues (i.e. speech sounds).  
 
 # Research Question
-What is the Levenshtein Distance betweeen Spanish, French, and Catalan, considering the ortographic and phonemic transcriptions.  
+What is the Levenshtein Distance betweeen Spanish, French, and Catalan, considering the ortographic and phonemic transcriptions?  
 
 # Data
 In order to compare these three languages, a small corpus was created using a fraction of *Harry Potter: The Philosopher's stone*.  
@@ -25,10 +26,13 @@ The books used were translated by:
   * French: Jean-François Ménard - Gallimard (2007)  
   * Spanish: Alicia Dellepiane - Emecé Editores España, S.A. (1999)  
 
-The corpus comprise 47 sentences, which accounts for ... on average on each language. The shortes sentence is ... and the largest is ... On average each sentence is ...
+The corpus comprises 47 sentences, which accounts for ... on average on each language. The shortest sentence is ... and the largest is ... On average each sentence is ...
 
 # Levenshtein Distance
-
+Levenshtein Distance is a number that counts how (dis)similar two strings are. It does so by counting how many times you would need to *insert*, *replace*, or *delete* a character to get a match.  
+For example, the distance between `hello` and `yellow` will be of 2:
+replace `h`by `y`  
+insert `w` or delete `w`
 ## Character distance
 
 ## Phonemic distance
