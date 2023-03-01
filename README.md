@@ -43,7 +43,7 @@ The following table shows the same sentence translated to all three languages, a
 | French & Catalan | `__ _____r dursley ___ _i_e_t__ __un_ _______ _n__e____ __u_______ qu_ _e__ _r__ues.` | 60 |
 | Catalan & Spanish | `el se__or dursley era director d_una ___r__a ___m__ada grunnings, que f_ia ______s.` | 30 |  
 
-Each score means that, in order to match the sentence between two languages, you will need to aply `N` changes.  
+Each score means that, in order to match the sentence between two languages, you will need to apply `N` changes.  
 
 ## Ortographic transcription
 The books used to obtain ortographic transcriptions were translated by:  
