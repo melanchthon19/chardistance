@@ -1,12 +1,12 @@
 # chardistance
-*Would you rather watch a Catalan movie at *la Cinémathèque française* subtitled in French or a French movie at *la Filmoteca de Catalunya* subtitled in Catalan?*  
+> Would you rather watch a Catalan movie at *la Cinémathèque française* subtitled in French or a French movie at *la Filmoteca de Catalunya* subtitled in Catalan?  
 
 # Motivation
 As a spanish speaker, being in Barcelona is not an issue... unless you dare to go to La Filmoteca de Catalunya and watch a French movie subtitled in Catalan.  
 Given that I don't know any of both languages beyond a small set of words (not even half A1), I wondered how should I watch the movie if I wanted to understand the dialogues.  
 Should I focus on the speech sounds or the subtitles? Does it make any difference?  
 My intuition says that Catalan should be easier to understand -at least that's what I think when I read it-. However, it resembles French when I hear it.  
-In order to find out the difference, I decided two measure two different but related language aspects using the same metric: Levinshtein Distance on the ortographic transcription of the dialogues (i.e. subtitles) and on the phonemic transcription of the dialogues (i.e. speech sounds).  
+In order to find out the difference, I decided to measure two different but related language aspects using the same metric: Levinshtein Distance on the ortographic transcription of the dialogues (i.e. subtitles) and on the phonemic transcription of the dialogues (i.e. speech sounds).  
 
 # Research Question
 What is the Levenshtein Distance betweeen Spanish, French, and Catalan, considering the ortographic and phonemic transcriptions?  
@@ -30,7 +30,7 @@ For example, the distance between `hello` and `yellow` will be of 2:
   * insert `w` or delete `w`
 
 This metric considers the best way of going from one string to the other by doing the least possible changes.  
-The following table shows the Levenshtein Distance applied to both ortographic and phonemic transcription of the first example:  
+The following table shows the same sentence translated to all three languages, and then the Levenshtein Distance applied to the ortographic transcription:  
 | Language | Sentence |
 | --- | --- |
 | Spanish | El señor Dursley era el director de una empresa llamada Grunnings, que fabricaba taladros. |
@@ -41,7 +41,8 @@ The following table shows the Levenshtein Distance applied to both ortographic a
 | --- | --- | --- |
 | Spanish & French | `_r dursley __r__e_it __ ________s_ ___ ___r___is_ qu_ fabri__a__ ___ __r___s__.` | 62 |
 | French & Catalan | `__ _____r dursley ___ _i_e_t__ __un_ _______ _n__e____ __u_______ qu_ _e__ _r__ues.` | 60 |
-| Catalan & Spanish | `el se__or dursley era director d_una ___r__a ___m__ada grunnings, que f_ia ______s.` | 30 |
+| Catalan & Spanish | `el se__or dursley era director d_una ___r__a ___m__ada grunnings, que f_ia ______s.` | 30 |  
+Each score means that, in order to match the sentence between two languages, you will need to aply `N` changes.  
 
 ## Ortographic transcription
 The books used to obtain ortographic transcriptions were translated by:  
@@ -71,14 +72,17 @@ The following table depicts the results. Each column represents the Levenshtein 
 | Ortographic | 95,04 | 68,98 | 92,67 |
 | Phonemic | 92,67 | 76,11 | 88,39 |
 
-Considering the ortographic comparison, Spanish and Catalan are closer to each other than they are to French, which is equally away by roughly 25 characters. The difference between Spanish-Catalan and Spanish-French comparison is of 26 changes, and the difference between both distances is of 21.  
-According to the phonemic comparison, Spanish is still closer to Catalan than it is to French by 16 changes. However, Spanish and Catalan are not equally away from French as the ortographic comparison showed. The difference between the Spanish-Catalan and Spanish-French comparison is of 15 changes, and the difference between both distances is of 8 characters.  
-These results suggests that for a Spanish speaker, Catalan is closer both ortographically as well as phonemically. Nonetheless, given that ortographic and phonemic distances are not of the same scale, the overall reduction of phonemic distances indicates that languages are evenly away from each other with regards to speech: ortographically the distance is of 26, whereas phonemically the distance is of 8, which is closer to 0.
+Considering the **ortographic** comparison, Spanish and Catalan are closer to each other (score of almost 69) than they are to French, which is equally away by roughly 25 characters (score higher than 92). The difference between Spanish-Catalan and Spanish-French comparison is a score of 26 (that is to say, you will make 26 more changes to get from Spanish to French than when going from Spanish to Catalan). The difference between both distances is of 21, which means that French is ortografically further away from both languages.  
+
+According to the **phonemic** comparison, Spanish is still closer to Catalan (score of 76) than it is to French (score of 92) by 16 changes. However, Spanish and Catalan are not equally away from French as the ortographic comparison showed. The phonemic difference between the Spanish-Catalan and Spanish-French comparison is of 15 changes (and not 26 as it was with the ortographic comparison), and the difference between both distances is of 8 characters (and not 21).  
+
+These results suggest that for a Spanish speaker, Catalan is closer both ortographically as well as phonemically. Nonetheless, given that ortographic and phonemic distances are not of the same scale, the overall reduction of phonemic distances indicates that languages are evenly away from each other with regards to speech: ortographically the distance is of 21, whereas phonemically the distance is of 8, which is closer to 0. Being closer in phonemic space is not synonym of easier hearing comprehension, but just equal comprehension distance.  
 
 # Conclusions
-Reading Catalan for a Spanish speaker will be easier to understand than listening, and understanding Catalan overall will be easier than French.  
+Reading Catalan for a Spanish speaker will be easier to understand than listening, and understanding Catalan overall will be easier than French. However, the distance notoriously shrinks when moving to phonemic space.  
 With regards to Catalan, even though it is phisically closer to French, their phonemic distance is almost as that of Spanish and French.  
-Last, but not least, I would recommend watching a French movie at *la Filmoteca de Catalunya* subtitled in Catalan.
+
+> Last, but not least, I would recommend watching a French movie at *la Filmoteca de Catalunya* subtitled in Catalan.
 
 # Future work
   * Use a bigger parallel corpora.  
@@ -99,7 +103,8 @@ It accepts the following flags:
 `--file: file that stores sentences`  
 `--index: analyse sentence at given index only` [optional]  
 `--preprocess: {ortographic,phonemic}` [optional]  
-`--verbose: print each minimum edit distance` [optional]  
+`--verbose: print each Levenshtein Distance` [optional]  
+
 Usage example:  
 `./compare.py -f data/hp.csv -p ortographic -v -i 2`  
 `./compare.py -f data/hp-phonemic.csv -p phonemic`  
