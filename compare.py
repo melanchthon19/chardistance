@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import re
-import sys
+from os.path import join
 import string
 import argparse
 import pandas as pd
@@ -9,7 +9,7 @@ from levenshtein import Levenshtein
 
 
 def read_data(file):
-    df = pd.read_csv(file)
+    df = pd.read_csv(join('data', file))
     data = {}
     data['esp'] = df['español']
     data['fra'] = df['francés']

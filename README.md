@@ -101,7 +101,7 @@ You can run `levenshtein.py` by itself passing two strings: `./levenshtein.py st
 
 The main file is `compare.py`. It uses Levenshtein class to compare strings from a given file.  
 It accepts the following flags:  
-`--file: file that stores sentences`  
+`--file: file in data folder that stores sentences {hp.csv,hp-phonemic.csv}`  
 `--index: analyse sentence at given index only` [optional]  
 `--preprocess: {ortographic,phonemic}` [optional]  
 `--verbose: print each Levenshtein Distance` [optional]  
